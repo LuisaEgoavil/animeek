@@ -1,5 +1,3 @@
-//const { Schema, model } = require("mongoose");
-
 const mongoose = require('mongoose')
 
 let UserSchema = new mongoose.Schema({
@@ -10,7 +8,7 @@ let UserSchema = new mongoose.Schema({
   },  
   password: {
     type: String,
-    required: true
+    required: true,
   } 
 })
 
