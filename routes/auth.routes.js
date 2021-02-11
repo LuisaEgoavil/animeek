@@ -30,11 +30,11 @@ router.post('/signup', (req, res, next) => {
      }
 
   //VALIDATE PASSWWORD (CHARACTERS AND SO)
-  let regexPass = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{8,20}$/;
+  /*let regexPass = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{8,20}$/;
      if (!regexPass.test(password)) {
         res.render('auth/signup', {msg: 'Password needs to have special chanracters, some numbers and be 6 characters aatleast'})
         return;
-     }
+     }*/
 
   //CREATE A SALT (ENCRYPT PASSWORD)
   let salt = bcrypt.genSaltSync(10);
