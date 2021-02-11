@@ -13,23 +13,21 @@
    </head>
 
    <body>
-
-      <nav>
+      <div><a href="/"><button type="button" class="btn btn-warning">Home</button></a></div>
+      <nav class="top-nav">
          <ul>
-            <li id="to-left">
-               <p><a href="/"><button type="button" class="btn btn-warning">Home</button></a></p>
+            <li id="to-right">
+               <a href="/signup"><button type="button" class="btn btn-warning">I am not an anime geek</button></a>
             </li>
             <li id="to-right">
-               <a href="/signup">Signup</a> <span> | </span>
+               <a href="/login"><button type="button" class="btn btn-warning">Already an anime geek?</button></a> 
             </li>
             <li id="to-right">
-               <a href="/login">Login</a> <span> | </span>
-            </li>
-            <li id="to-right">
-                  <a href="/logout">Logout</a> <span> | </span>
+                  <a href="/logout"><button type="button" class="btn btn-warning">Logout</button></a>
             </li>
          </ul>
       </nav> 
+
 
       {{{body}}}
 
