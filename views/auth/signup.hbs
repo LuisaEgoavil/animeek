@@ -1,0 +1,16 @@
+<form action="/signup" method="POST">
+  <label>Name</label>
+  <input name="name" type="text"  placeholder="Enter your name"  >
+
+  <label>Email</label>
+  <input name="email" type="email"  placeholder="Enter your email"  >
+
+  <label>Password</label>
+  <input name="password" type="password"  placeholder="Enter your Password"  >
+  <button type="submit" >Sign Up</button>
+</form>
+
+{{!-- Conditionally render the msg --}}
+{{#if msg}}
+ <div class="error">{{msg}}</div>
+{{/if}}
