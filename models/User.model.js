@@ -13,4 +13,3 @@ const User = model("User", userSchema);
 
 module.exports = User;
 
-let test = test
