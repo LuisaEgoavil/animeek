@@ -1,12 +1,13 @@
-<h1>Hello {{this.name}}!,</h1>
+<h1>Hello {{email}}!,</h1>
 <h5>this is your Watchlist so far:</h5>
-{{#each }}
 
-<button>Delete</button>
+<form method="POST" action="/delete">
+ 
+  <button type="submit" name="deletebtn">Delete</button>
+</form>
 
-{{/each}}
+<form method="POST" action="/add">
+  
+  <button type="submit" name="addbtn">Add another anime to your Watchlist!</button>
+</form>
 
-
-
-
-<button>Add another anime to your Watchlist!</button>

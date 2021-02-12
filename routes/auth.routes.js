@@ -102,5 +102,12 @@ router.get('/logout', (req, res) => {
   res.redirect('/')
 })
 
+//--------------------------------------------------------------
+//get request for going to search
+
+
+
+
+
 //EXPORT
 module.exports = router;

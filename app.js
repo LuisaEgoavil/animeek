@@ -34,7 +34,7 @@ app.use(session({
     saveUninitialized: false, 
     resave: false, 
     cookie: {
-      maxAge: 1000*60*60*24// is in milliseconds.  expiring in 1 day
+      something: 1000*60*60*24// is in milliseconds.  expiring in 1 day
     },
     store: new MongoStore({
       mongooseConnection: mongoose.connection,
@@ -50,6 +50,8 @@ app.use("/", index);
 
 const authRoutes = require('./routes/auth.routes');
 app.use('/', authRoutes);
+
+
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes
 require("./error-handling")(app);
