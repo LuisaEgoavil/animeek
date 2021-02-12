@@ -80,7 +80,6 @@ router.post('/login', (req, res, next) => {
       })
 })
 
-
 //MIDDLEWARE TO PRETECTS ROUTES
 const checkLoggedInUser = (req, res, next) => {
   if(req.session.userData) {
@@ -103,7 +102,15 @@ router.get('/logout', (req, res) => {
 })
 
 //--------------------------------------------------------------
-//get request for going to search
+//GET THE SEARCH PAGE
+router.get('/search', (req,res) => {
+  res.render('search.hbs')
+})
+
+router.post('/search', (req, res)=> {
+  res.render('search.hbs')
+})
+
 
 
 
