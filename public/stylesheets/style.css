@@ -8,4 +8,14 @@ a {
 h1 {
   color: 15px; }
 
+.top-nav ul {
+  list-style: none;
+  display: flex;
+}
+/*
+.top-nav {
+  display: none;
+}
+*/
+
 /*# sourceMappingURL=style.css.map */
