@@ -1,21 +1,28 @@
 body {
+  width: 100%;
   padding: 50px;
   font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
-
+  
 a {
   color: #00b7ff; }
 
 h1 {
   color: 15px; }
 
-.top-nav ul {
+.wrapper-home {
+  margin: 0 auto;
+  display: flex;
+  justify-content: center;
+}
+
+.wrapper-index {
+  margin: 0 auto;
+}
+
+  .top-nav ul {
   list-style: none;
   display: flex;
 }
-/*
-.top-nav {
-  display: none;
-}
-*/
+
 
 /*# sourceMappingURL=style.css.map */
