@@ -1,13 +1,13 @@
 <a href="/logout"><button type="button" class="btn btn-warning">Logout</button></a>
-<button>Add another anime to your Watchlist!</button>
-<h1>Hello {{email}}!,</h1>
+
+<h1>Hello {{email}}!</h1>
 <h5>this is your Watchlist so far:</h5>
 
 
-<p>Title{{this.title}}</p>
+{{!-- <p>Title{{this.title}}</p>
 <img src={{this.images.url}}>
 <p>{{this.synopsis}}</p>
-<p>Episode:{{this.episodes}}</p>
+<p>Episode:{{this.episodes}}</p> --}}
 <form method="POST" action="/delete">
   <button type="submit" name="deletebtn">Delete</button>
 </form>
