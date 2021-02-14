@@ -1,28 +1,119 @@
 body {
   width: 100%;
   padding: 50px;
-  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; }
-  
+  font: 14px "Lucida Grande", Helvetica, Arial, sans-serif;
+}
+
 a {
-  color: #00b7ff; }
+  color: #00b7ff; 
+}
 
 h1 {
-  color: 15px; }
+  color: 15px; 
+}
 
+/* -----layout Page----- */
 .wrapper-home {
   margin: 0 auto;
   display: flex;
   justify-content: center;
 }
 
+/* -----index Page----- */
 .wrapper-index {
-  margin: 0 auto;
+  width: 90%;
+  margin: 50px auto 30px;
 }
 
-  .top-nav ul {
+.wrapper-index h1 {
+  text-align: center;
+  margin-top: 60px;
+}
+
+.wrapper-index p {
+  margin: 50px 0;
+  text-align: center;
+}
+
+.index-btn {
+  margin: 20% 0 0;
+  display: flex;
+  justify-content: center;
+}
+
+.index-btn a {
+  margin: 0 70px 0;
+}
+
+.index-btn button {
+  padding: 20px 30px;
+}
+
+.top-nav ul {
   list-style: none;
   display: flex;
 }
+
+/* -----Sign Up & Log in Page----- */
+.wrapper-signup,
+.wrapper-login {
+  margin: 100px auto ;
+  display: flex;
+  justify-content: center;
+}
+
+.signup-forms,
+.login-forms {
+  display: block;
+  margin: 4% 0;
+}
+
+.signup-forms label,
+.login-forms label {
+  padding: 20px;
+  font-size: 30px;
+  margin-right: 12%;
+}
+
+.signup-forms-pwd label,
+.login-forms-pwd label{
+  padding: 20px;
+  font-size: 30px;
+}
+
+.signup-btn,
+.login-btn {
+  display: block;
+  text-align: center;
+  margin: 20% auto;
+}
+
+.signup-btn button,
+.login-btn button {
+  padding: 16px 30px;
+  font-size: 20px;
+}
+
+.signup-forms input,
+.signup-forms-pwd input,
+.login-forms input,
+.login-forms-pwd input {
+  width: 260px;
+  height: 40px;
+}
+
+.signup-forms input::placeholder,
+.signup-forms-pwd input::placeholder,
+.login-forms input::placeholder,
+.login-forms-pwd input::placeholder {
+  font-size: 20px;
+  padding-left: 2%;
+}
+
+
+
+
+
 
 
 /*# sourceMappingURL=style.css.map */

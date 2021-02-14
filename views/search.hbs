@@ -1,16 +1,38 @@
+<br><br><br>
+<a href="/logout"><button type="button" class="btn btn-danger btn-sm">Logout</button></a>
 
-<a href="/logout"><button type="button" class="btn btn-warning">Logout</button></a>
+
+{{!-- ADDED A BUTTON TO GO TO PROFILE--}}
+<a href="/profile"><button type="button" class="btn btn-warning">Profile</button></a>
+
+<br><br><br>
+<h1>Anime Title</h1><br>
 
 
-<h1>This is the search page</h1>
+  <h4>Name</h4>
+  <br>
+<nav>
+<div>
+<form class="d-flex" method="POST" action="search.hbs" class="d-flex">
+        <input type="text" class="form-control me-2" type="search" placeholder="Type to search..." list="datalistOptions" aria-label="Search">
+        <button href="/searchanime" class="btn btn-outline-warning" type="submit">Search</button>
+      </form>
+      </div>
+      </nav>
+<br><br><br>
 
-<h2>Anime Title</h2>
+{{!-- HERE COMES TO FOR LOOP
+ {{#each     }}--}}
+<div class="d-flex position-relative">
+  <img src="..." class="flex-shrink-0 me-3" alt="...">
+  <div>
+    <h5 class="mt-0">Here comes the anime title</h5>
+    <p>Here comes the description</p>
+    <a href="#" class="stretched-link"><button href="/addanime" type="button" class="btn btn-warning">Add it!</button></a>
+    
+  </div>
+</div>
 
-<form method="POST" action="search.hbs">
-  <label>Name</label>
-  <input name="name" type="text" placeholder="Enter your favorite anime">
-</form>
-  
-<button>Search</button>
-<button>Add</button>
+{{!-- END OF FOR LOOP
+{{/each}}    --}}
 

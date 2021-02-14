@@ -102,7 +102,8 @@ router.get('/logout', (req, res) => {
 })
 
 //--------------------------------------------------------------
-//GET THE SEARCH PAGE
+//GET & POST THE SEARCH PAGE
+
 router.get('/search', (req,res) => {
   res.render('search.hbs')
 })
@@ -110,6 +111,20 @@ router.get('/search', (req,res) => {
 router.post('/search', (req, res)=> {
   res.render('search.hbs')
 })
+
+//--------------------------------------------------------------
+//GET & POST FROM SEARCH TO PROFILE
+
+router.get('/profile', (req,res) => {
+  res.render('profile.hbs')
+})
+/*
+router.post('/profile', (req, res) => {
+  res.render('profile.hbs')
+})*/
+//--------------------------------------------------------------
+
+
 
 
 
