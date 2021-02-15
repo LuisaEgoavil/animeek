@@ -5,7 +5,7 @@ let AnimeSchema = new mongoose.Schema({
   image_url: String,
   synopsis: String,
   episodes: Number,
-  genre: String
+  score: Number
 });
 
 let AnimeModel = mongoose.model('animeinfo', AnimeSchema)
