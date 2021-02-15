@@ -13,7 +13,7 @@
   <br>
 <nav>
 <div>
-  {{!-- <a href="/info/search?query=naruto">somthing</a> --}}
+
 <form class="d-flex" method="POST" action="/info/search">
         <input id="anime-input" name="query" class="form-control me-2" type="text" placeholder="Type to search..." aria-label="Search">
         <button class="btn btn-outline-warning" type="submit">Search</button>
@@ -29,11 +29,15 @@
   
     <h5 class="mt-0">{{this.title}}</h5>
 
-    <p>{{this.synopsis}}</p>
+    <p>{{this.synopsis}}<a href="more" class="more">more</a></p>
+    <p>🎬  &nbsp Episodes: {{this.episodes}}</p>
+    <p>⭐  &nbsp Score of: {{this.score}}</p>
     <a href="#" class="stretched-link"><button href="/addanime" type="button" class="btn btn-warning">Add it!</button></a>
     
   </div>
 </div>
 <br><br><br>
 {{/each}}   
+
+
 

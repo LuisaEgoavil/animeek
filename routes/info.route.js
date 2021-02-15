@@ -56,19 +56,24 @@ axios.request(options)
         let animeOptions = []
 
         animeArr.forEach((anime) =>{
-          //console.log(anime.image_url)
-          let img = anime.image_url
           
-          //console.log(anime.title)
+          let img = anime.image_url
+          //console.log(anime.image_url)
           let title = anime.title
-
-          //console.log(anime.synopsis)
+          //console.log(anime.title)
           let synopsis = anime.synopsis
+          //console.log(anime.synopsis)
+          let episodes = anime.episodes
+          //console.log(anime.episodes)
+          let score = anime.score
+          //console.log(anime.score)
 
           let newAnime = {
             img: img,
             title: title,
-            synopsis: synopsis
+            synopsis: synopsis,
+            episodes: episodes,
+            score: score
           }
           animeOptions.push(newAnime)
         })
