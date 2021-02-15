@@ -34,7 +34,7 @@ router.get('/profile', (req,res) => {
 router.post('/search', (req, res) => {
   
   //GRAB THE CODE FROM JIKAN
-  let searchAnime = req.body 
+let searchAnime = req.body 
   
 const axios = require("axios").default;
 
@@ -49,16 +49,49 @@ let options = {
 };
 
 axios.request(options)
-.then(function (response) {
-	console.log(response.data.results[1].title);
+    .then(function (response) {
+	      //console.log(response.data.results);
+        let animeArr = response.data.results;
+        //image_url, title, synopsis
+        let animeOptions = []
+
+        animeArr.forEach((anime) =>{
+          //console.log(anime.image_url)
+          let img = anime.image_url
+          
+          //console.log(anime.title)
+          let title = anime.title
+
+          //console.log(anime.synopsis)
+          let synopsis = anime.synopsis
+
+          let newAnime = {
+            img: img,
+            title: title,
+            synopsis: synopsis
+          }
+          animeOptions.push(newAnime)
+        })
+        
+        res.render('search', {animeOptions})
+        
+        
+    })
+    .catch(function (error) {
+	      console.error(error);
+    });
 })
-.catch(function (error) {
-	console.error(error);
-});
 
-//console.log(req.query)
-})
+//---------------------------------------------------------------
+
+ 
+
+ 
 
 
 
+
+
+
+//EXPORT
 module.exports = router;
