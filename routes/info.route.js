@@ -31,15 +31,17 @@ router.get('/profile', (req,res) => {
 
 //--------------------------------------------------------------
 
-router.get('/search', (req, res) => {
+router.post('/search', (req, res) => {
   
   //GRAB THE CODE FROM JIKAN
+  let searchAnime = req.body 
+  
 const axios = require("axios").default;
 
-var options = {
+let options = {
   method: 'GET',
   url: 'https://jikan1.p.rapidapi.com/search/anime',
-  params: {q: ''},
+  params: {q: searchAnime },
   headers: {
     'x-rapidapi-key': 'a15b028483mshd7de36fe4ec3c86p1dd3adjsnc9a9d91ca457',
     'x-rapidapi-host': 'jikan1.p.rapidapi.com'
@@ -48,16 +50,15 @@ var options = {
 
 axios.request(options)
 .then(function (response) {
-	console.log(response.data);
+	console.log(response.data.results[1].title);
 })
 .catch(function (error) {
 	console.error(error);
 });
 
-
-
-console.log(req.query)
+//console.log(req.query)
 })
+
 
 
 module.exports = router;

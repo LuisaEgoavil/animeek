@@ -6,15 +6,15 @@
 <a href="/profile"><button type="button" class="btn btn-warning">Profile</button></a>
 
 <br><br><br>
-<h1>Anime Title</h1><br>
+<h1>Search Page</h1><br>
 
 
   <h4>Name</h4>
   <br>
 <nav>
 <div>
-  <a href="/info/search?query=naruto">somthing</a>
-<form class="d-flex" method="GET" action="/info/search">
+  {{!-- <a href="/info/search?query=naruto">somthing</a> --}}
+<form class="d-flex" method="POST" action="/info/search">
         <input id="anime-input" name="query" class="form-control me-2" type="text" placeholder="Type to search..." aria-label="Search">
         <button class="btn btn-outline-warning" type="submit">Search</button>
       </form>
@@ -23,11 +23,11 @@
 <br><br><br>
 
 {{!-- HERE COMES THE FOR LOOP
- {{#each     }}--}}
+ {{#each     --}}
 <div class="d-flex position-relative">
   <img src="..." class="flex-shrink-0 me-3" alt="...">
   <div>
-    <h5 class="mt-0">Here comes the anime title</h5>
+    <h5 class="mt-0">This is the title</h5>
     <p>Here comes the description</p>
     <a href="#" class="stretched-link"><button href="/addanime" type="button" class="btn btn-warning">Add it!</button></a>
     
