@@ -58,6 +58,7 @@ axios.request(options)
         animeArr.forEach((anime) =>{
           //console.log(anime.image_url)
           let img = anime.image_url
+          console.log(img)
 
           
           //console.log(anime.title)
@@ -76,7 +77,7 @@ axios.request(options)
 
         })
         
-        res.render('/search', {animeOptions})
+        res.render('search', {animeOptions})
         
         
     })
