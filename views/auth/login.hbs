@@ -1,26 +1,29 @@
+<div class="wrapper-top">
+  <a class="logo" href="/"><button type="button" class="btn btn-warning"><img src="images/logo.png" alt="logo"></button></a>
+  <h1>Welcom back Anime Geek!</h1>
+</div>
+
 <div class="wrapper-login">
-   <form method="POST" action="/login">
-     <span class="login-forms">
-       <label>Email</label>
-         <input type="email" name="email" placeholder="Enter your email">
-     </span>
+  <form method="POST" action="/login" class="wrapper-forms">
+    <span class="login-forms">
+      <label>Email</label>
+      <input type="email" name="email" placeholder="Enter your email">
+    </span>
 
-     <span class="login-forms-pwd">
-        <label>Password</label>
-          <input type="password" name="password" placeholder="Enter your Password">
-     </span>
+    <span class="login-forms-pwd">
+      <label>Password</label>
+      <input type="password" name="password" placeholder="Enter your Password">
+    </span>
 
-     <span class="login-btn">
-        <button type="submit" class="btn btn-warning">Log In</button>
-     </span>
-
+    <span class="login-btn">
+      <button type="submit" class="btn btn-warning">Log In</button>
+    </span>
   </form>
-  
 </div>
 
 
 
 {{!-- Conditionally render the msg --}}
 {{#if msg}}
- <div class="error">{{msg}}</div>
+  <div class="error">{{msg}}</div>
 {{/if}}
