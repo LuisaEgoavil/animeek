@@ -34,7 +34,7 @@ router.get('/profile', (req,res) => {
 router.post('/search', (req, res) => {
   
   //GRAB THE CODE FROM JIKAN
-  let searchAnime = req.body 
+let searchAnime = req.body 
   
 const axios = require("axios").default;
 
@@ -49,16 +49,27 @@ let options = {
 };
 
 axios.request(options)
-.then(function (response) {
-	console.log(response.data.results[1].title);
+    .then(function (response) {
+	      console.log(response.data.results[0].title);
+        //CLOSE THE CONNECTION HERE?
+        //mongoose.connection.close()
+    })
+    .catch(function (error) {
+	      console.error(error);
+         //CLOSE THE CONNECTION HERE?
+         //mongoose.connection.close()
+    });
 })
-.catch(function (error) {
-	console.error(error);
-});
 
-//console.log(req.query)
-})
+//---------------------------------------------------------------
 
 
+ 
 
+
+
+
+
+
+//EXPORT
 module.exports = router;
