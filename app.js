@@ -45,10 +45,14 @@ app.use(session({
 
 
 // 👇 Start handling routes here
+const infoRoutes = require('./routes/info.route.js')
+app.use('/info', infoRoutes)
+
 const index = require("./routes/index");
 app.use("/", index);
 
 const authRoutes = require('./routes/auth.routes');
+
 app.use('/', authRoutes);
 
 app.get('/search', authRoutes)

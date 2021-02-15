@@ -13,15 +13,16 @@
   <br>
 <nav>
 <div>
-<form class="d-flex" method="POST" action="search.hbs" class="d-flex">
-        <input type="text" class="form-control me-2" type="search" placeholder="Type to search..." list="datalistOptions" aria-label="Search">
-        <button href="/searchanime" class="btn btn-outline-warning" type="submit">Search</button>
+  <a href="/info/search?query=naruto">somthing</a>
+<form class="d-flex" method="GET" action="/info/search">
+        <input id="anime-input" name="query" class="form-control me-2" type="text" placeholder="Type to search..." aria-label="Search">
+        <button class="btn btn-outline-warning" type="submit">Search</button>
       </form>
       </div>
       </nav>
 <br><br><br>
 
-{{!-- HERE COMES TO FOR LOOP
+{{!-- HERE COMES THE FOR LOOP
  {{#each     }}--}}
 <div class="d-flex position-relative">
   <img src="..." class="flex-shrink-0 me-3" alt="...">
