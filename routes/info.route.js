@@ -1,9 +1,9 @@
 const router = require('express').Router();
-
 const AnimeModel = require('../models/Anime.model.js')
-
 const axios = require('axios')
 
+
+//--------------------------------------------------------------
 router.get('/animeinfo', (req, res, next) => {
 
   AnimeModel.find()
@@ -15,6 +15,8 @@ router.get('/animeinfo', (req, res, next) => {
        next(error)
      })
 });
+
+//--------------------------------------------------------------
 
 //GO TO THE SEARCH PAGE
 
@@ -77,10 +79,7 @@ axios.request(options)
           }
           animeOptions.push(newAnime)
         })
-        
         res.render('search', {animeOptions})
-        
-        
     })
     .catch(function (error) {
 	      console.error(error);
@@ -88,15 +87,30 @@ axios.request(options)
 })
 
 //---------------------------------------------------------------
+//TRYING!!
+router.post('/info/search/create', (req, res) => {
+  
+   const {addimg, addtitle, addepisodes, addscore, addsypnosis} = req.body
+   let myNewAnimeObj = {
+    title: addtitle,
+    image_url: addimg,
+    synopsis: addsypnosis,
+    episodes: addepisodes,
+    score: addscore
+   }
 
- 
+   AnimeModel.create(myNewAnimeObj)
+      .then(()=> {
+        res.redirect('/profile')
+          
+      })
+      .catch(()=> {
+          console.log('Something went wrong while creating')
+      })
 
- 
 
+})
 
-
-
-
-
+//---------------------------------------------------------------
 //EXPORT
 module.exports = router;

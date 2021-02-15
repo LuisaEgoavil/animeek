@@ -1,3 +1,5 @@
+
+
 // ℹ️ Gets access to environment variables/settings
 // https://www.npmjs.com/package/dotenv
 require("dotenv/config");
@@ -56,6 +58,11 @@ app.use('/', authRoutes);
 
 
 
+
+//SETUP BODY PARSER
+const bodyParser = require('body-parser');
+app.use(bodyParser.json());
+app.use(bodyParser.urlencoded({extended: false}));
 
 
 // ❗ To handle errors. Routes that don't exist or errors that you handle in specific routes

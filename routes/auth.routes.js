@@ -7,11 +7,13 @@ router.get('/login', (req, res, next) => {
   res.render('auth/login.hbs')
 });
 
+//--------------------------------------------------------------
 //GET SIGN UP PAGE
 router.get('/signup', (req, res, next) => {
   res.render('auth/signup.hbs')
 });
 
+//--------------------------------------------------------------
 //POST REQUEST TO SIGNUP
 router.post('/signup', (req, res, next) => {
   const {name, email, password} = req.body
@@ -49,6 +51,7 @@ router.post('/signup', (req, res, next) => {
 
 })
 
+//--------------------------------------------------------------
 //POST REQUEST FOR LOG IN
 router.post('/login', (req, res, next) => {
   const {email, password} = req.body
@@ -80,6 +83,7 @@ router.post('/login', (req, res, next) => {
       })
 })
 
+//--------------------------------------------------------------
 //MIDDLEWARE TO PRETECTS ROUTES
 const checkLoggedInUser = (req, res, next) => {
   if(req.session.userData) {
@@ -90,12 +94,14 @@ const checkLoggedInUser = (req, res, next) => {
   }
 }
 
+//--------------------------------------------------------------
 //GUET REQUEST TO HANDLE THE PROFILE
 router.get('/profile', checkLoggedInUser, (req, res, next) => {
   let email = req.session.userData.email
   res.render('profile.hbs', {email})
 })
 
+//--------------------------------------------------------------
 router.get('/logout', (req, res) => {
   req.session.destroy()
   res.redirect('/')
