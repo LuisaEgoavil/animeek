@@ -1,15 +1,12 @@
 <div class="wrapper-top">
   <a class="logo"><button type="button" class="btn btn-warning"><img src="images/logo.png" alt="logo"></button></a>
-  <h1>Hello {{email}}!</h1>
+  <h1>Hello {{name}}!</h1>
   <a class="logout" href="/logout"><button type="button" class="btn btn-danger btn-sm">Logout</button></a>
 </div>
 
 <div class="wrapper-profile">
   <h2>this is your Watchlist so far:</h2>
-  {{!-- <p>Title{{this.title}}</p>
-  <img src={{this.images.url}}>
-  <p>{{this.synopsis}}</p>
-  <p>Episode:{{this.episodes}}</p> --}}
+  
   <form method="POST" action="/delete">
     <button href="/delete" type="button" class="btn btn-warning">Delete</button>
   </form>

@@ -7,7 +7,7 @@
 
 <body>
 <div class="wrapper-top">
-  <a class="logo"><button type="button" class="btn btn-warning"><img src="../images/logo.png" alt="logo"></button></a>
+  
   <h1>Let's search and find your favorite</h1>
   <a href="/profile"><button type="button" class="btn btn-warning">Profile</button></a>
   <a href="/logout"><button type="button" class="btn btn-danger btn-sm">Logout</button></a>
@@ -28,6 +28,7 @@
 <br><br><br>
 
 {{#each animeOptions}}
+<form method ="POST" action="/info/search/create/{{this.id}}">
 <div class="d-flex position-relative">
   <img src="{{this.img}}" class="flex-shrink-0 me-3" alt="...">
   <div>
@@ -37,10 +38,11 @@
     <p>{{this.synopsis}}<a href="more" class="more">more</a></p>
     <p>🎬  &nbsp Episodes: {{this.episodes}}</p>
     <p>⭐  &nbsp Score of: {{this.score}}</p>
-    <a href="#" class="stretched-link"><button href="/addanime" type="button" class="btn btn-warning">Add it!</button></a>
+    <button type="submit" class="btn btn-warning">Add it!</button>
     
   </div>
 </div>
+</form>
 <br><br><br>
 {{/each}}   
 

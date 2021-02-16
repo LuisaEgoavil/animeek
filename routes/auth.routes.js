@@ -84,7 +84,7 @@ router.post('/login', (req, res, next) => {
 })
 
 //--------------------------------------------------------------
-//MIDDLEWARE TO PRETECTS ROUTES
+//MIDDLEWARE TO PROTECTS ROUTES
 const checkLoggedInUser = (req, res, next) => {
   if(req.session.userData) {
     next()
@@ -97,8 +97,8 @@ const checkLoggedInUser = (req, res, next) => {
 //--------------------------------------------------------------
 //GUET REQUEST TO HANDLE THE PROFILE
 router.get('/profile', checkLoggedInUser, (req, res, next) => {
-  let email = req.session.userData.email
-  res.render('profile.hbs', {email})
+  let name = req.session.userData.name
+  res.render('profile.hbs', {name})
 })
 
 //--------------------------------------------------------------
