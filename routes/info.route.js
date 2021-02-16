@@ -58,7 +58,7 @@ axios.request(options)
         let animeOptions = []
 
         animeArr.forEach((anime) =>{
-          
+          //console.log(anime)
           let img = anime.image_url
           //console.log(anime.image_url)
           let title = anime.title
@@ -72,6 +72,7 @@ axios.request(options)
 
           let newAnime = {
             img: img,
+            id: anime.mal_id,
             title: title,
             synopsis: synopsis,
             episodes: episodes,
@@ -79,6 +80,9 @@ axios.request(options)
           }
           animeOptions.push(newAnime)
         })
+        //saving our anime in the session to use it in future
+        req.session.animeOptions = animeOptions
+
         res.render('search', {animeOptions})
     })
     .catch(function (error) {
@@ -89,19 +93,33 @@ axios.request(options)
 //---------------------------------------------------------------
 //TRYING!!
 
+
+
 router.post('/search/create/:animeid', (req, res) => {
-  console.log(req.session)
 
-   let animeid = req.params.animeid
-   console.log(animeid)
+   let animeid = req.params.animeid 
+   //console.log('our anime id ', animeid)
 
-   const {addimg, addtitle, addepisodes, addscore, addsypnosis} = req.body
+  // all our animes are present in req.session.animeOptions
+  // the user anime id is present in `animeid`
+  let ourAnime = {}
+  for (let i=0; i< req.session.animeOptions.length; i++) {
+      let singleAnime = req.session.animeOptions[i]
+      if (singleAnime.id == animeid) {
+        ourAnime = singleAnime;
+        break;
+      }
+  }
+
+console.log('Anime', ourAnime)
+  const {img, id, title, synopsis, episodes, score} = ourAnime
    let myNewAnimeObj = {
-    title: addtitle,
-    image_url: addimg,
-    synopsis: addsypnosis,
-    episodes: addepisodes,
-    score: addscore,
+    title,
+    image_url: img,
+    synopsis,
+    episodes,
+    score,
+    animeid: id,
     myUserId: req.session.userData._id
    }
 
@@ -115,6 +133,10 @@ router.post('/search/create/:animeid', (req, res) => {
       })
 
 })
+
+//---------------------------------------------------------------
+
+
 
 
 //---------------------------------------------------------------

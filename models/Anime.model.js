@@ -10,7 +10,8 @@ let AnimeSchema = new mongoose.Schema({
   myUserId: {
     type: mongoose.Schema.Types.ObjectId,
     ref: 'user'
-  }
+  },
+  animeid: Number
 });
 
 let AnimeModel = mongoose.model('animeinfo', AnimeSchema)
