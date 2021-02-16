@@ -6,6 +6,7 @@ const axios = require('axios')
 //--------------------------------------------------------------
 router.get('/animeinfo', (req, res, next) => {
 
+  
   AnimeModel.find()
      .then((title)=> {
        res.render('title', {title})
@@ -14,6 +15,7 @@ router.get('/animeinfo', (req, res, next) => {
      .catch((error)=> {
        next(error)
      })
+
 });
 
 //--------------------------------------------------------------
@@ -23,29 +25,6 @@ router.get('/animeinfo', (req, res, next) => {
 router.get('/add', (req, res)=> {
   res.render('search.hbs')
 })
-
-//--------------------------------------------------------------
-//FROM SEARCH TO PROFILE
-
-router.get('/profile', (req,res, next) => {
-
-  //Fetch the data from the anime info collection
-  AnimeModel.find()
-    .then((result) =>{
-      // If statement -> if the userId on the anime info = loggedInUser, then displaz the animes
-      if(animeinfo === checkLoggedInUser) {
-          console.log(result)
-          res.render('profile.hbs', result)
-      } else {
-          console.log('error while fetching')
-      }
-      
-    })
-    .catch((err) => {
-      next(error)
-    })
-})
-
 
 //--------------------------------------------------------------
 
@@ -112,7 +91,7 @@ axios.request(options)
 router.post('/search/create/:animeid', (req, res) => {
 
    let animeid = req.params.animeid 
-   //console.log('our anime id ', animeid)
+   console.log('our anime id ', animeid)
 
   // all our animes are present in req.session.animeOptions
   // the user anime id is present in `animeid`
@@ -125,7 +104,7 @@ router.post('/search/create/:animeid', (req, res) => {
       }
   }
 
- //console.log('Anime', ourAnime)
+  //console.log('Anime', ourAnime)
   const {img, id, title, synopsis, episodes, score} = ourAnime
    let myNewAnimeObj = {
     title,
@@ -145,25 +124,29 @@ router.post('/search/create/:animeid', (req, res) => {
       .catch(()=> {
           console.log('Something went wrong while creating')
       })
+
+   
 })
 
-//---------------------------------------------------------------
 
 //---------------------------------------------------------------
-/*DELETE REQUEST
+//DELETE REQUEST
 
-router.get('/search/create/:animeid', (req, res) => {
+router.post('/search/:animeid/delete', (req, res, next) => {
   let animeid = req.params.animeid
 
-  AnimeModel.findById(animeid)
+  AnimeModel.findByIdAndDelete(animeid)
      .then(() => {
          res.redirect('/profile')
+         console.log('deleted anime')
+         //res.render('/profile')
      })
      .catch(()=> {
+       console.log('error')
          console.log('Deleted failed!')
      })
 })
-*/ 
+
 
 //---------------------------------------------------------------
 //EXPORT
