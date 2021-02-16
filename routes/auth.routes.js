@@ -1,6 +1,7 @@
 const router = require("express").Router();
 const bcrypt = require('bcryptjs');
 const UserModel = require('../models/User.model')
+const AnimeModel = require('../models/Anime.model')
 
 //GET LOG IN PAGE
 router.get('/login', (req, res, next) => {
@@ -98,7 +99,15 @@ const checkLoggedInUser = (req, res, next) => {
 //GUET REQUEST TO HANDLE THE PROFILE
 router.get('/profile', checkLoggedInUser, (req, res, next) => {
   let name = req.session.userData.name
-  res.render('profile.hbs', {name})
+  //this will give us the selected animes in the profile
+  AnimeModel.find()
+    .then((result) =>{
+      //console.log('animeid', result)
+      res.render('profile.hbs', {result})
+    })
+    .catch((err) => {
+      next(err)
+})
 })
 
 //--------------------------------------------------------------
