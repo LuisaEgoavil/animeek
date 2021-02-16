@@ -99,11 +99,12 @@ const checkLoggedInUser = (req, res, next) => {
 //GUET REQUEST TO HANDLE THE PROFILE
 router.get('/profile', checkLoggedInUser, (req, res, next) => {
   let name = req.session.userData.name
+  
   //this will give us the selected animes in the profile
   AnimeModel.find()
     .then((result) =>{
       //console.log('animeid', result)
-      res.render('profile.hbs', {result})
+      res.render('profile.hbs', {result, name})
     })
     .catch((err) => {
       next(err)
