@@ -27,9 +27,25 @@ router.get('/add', (req, res)=> {
 //--------------------------------------------------------------
 //FROM SEARCH TO PROFILE
 
-router.get('/profile', (req,res) => {
-  res.render('profile.hbs')
+router.get('/profile', (req,res, next) => {
+
+  //Fetch the data from the anime info collection
+  AnimeModel.find()
+    .then((result) =>{
+      // If statement -> if the userId on the anime info = loggedInUser, then displaz the animes
+      if(animeinfo === checkLoggedInUser) {
+          console.log(result)
+          res.render('profile.hbs', result)
+      } else {
+          console.log('error while fetching')
+      }
+      
+    })
+    .catch((err) => {
+      next(error)
+    })
 })
+
 
 //--------------------------------------------------------------
 
@@ -132,7 +148,6 @@ router.post('/search/create/:animeid', (req, res) => {
 })
 
 //---------------------------------------------------------------
-
 
 //---------------------------------------------------------------
 /*DELETE REQUEST
