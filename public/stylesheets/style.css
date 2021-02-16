@@ -2,7 +2,7 @@
 
 body {
   width: 100%;
-  padding: 30px;
+  padding: 70px;
   /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
   font-family: 'Truculenta', sans-serif;
   background-color:  rgb(255, 209, 183);
@@ -16,20 +16,14 @@ h1 {
   color: 15px; 
   text-align: center;
   margin-top: 2% auto;
-  padding: 0 20% 0 24%;
+  padding: 0 20% 0 22%;
   font-size: 70px;
 }
-
-
-
-
-
-
 
 /* -----layout Page----- */
 .wrapper-top {
   display: flex;
-  width: 98%;
+  width: 80%;
   margin: 0 auto;
 }
 
@@ -40,7 +34,9 @@ h1 {
 
 .wrapper-top .btn-warning {
   background-color: transparent;
-  border: none;
+  border: 4px solid #ffc077;
+  padding: 0;
+  border-radius: 40px;
 }
 
 /* -----index Page----- */
@@ -78,10 +74,6 @@ h1 {
   display: flex;
 }
 
-/* .carousel-item {
-  margin: 0 15%;
-} */
-
 .anime-img {
   width: 70%;
   height: auto;
@@ -90,6 +82,14 @@ h1 {
 
 .carousel-indicators {
   top: 104%;
+}
+
+.index-main p {
+  font-size: 30px;
+}
+
+.index-main button {
+  font-size: 20px;
 }
 
 
