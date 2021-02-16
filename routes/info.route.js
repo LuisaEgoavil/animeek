@@ -91,9 +91,7 @@ axios.request(options)
 })
 
 //---------------------------------------------------------------
-//TRYING!!
-
-
+// PASSING INFORMATION TO THE DB
 
 router.post('/search/create/:animeid', (req, res) => {
 
@@ -111,7 +109,7 @@ router.post('/search/create/:animeid', (req, res) => {
       }
   }
 
-console.log('Anime', ourAnime)
+ //console.log('Anime', ourAnime)
   const {img, id, title, synopsis, episodes, score} = ourAnime
    let myNewAnimeObj = {
     title,
@@ -126,18 +124,31 @@ console.log('Anime', ourAnime)
    AnimeModel.create(myNewAnimeObj)
       .then(()=> {
         res.redirect('/profile')
-          
+        
       })
       .catch(()=> {
           console.log('Something went wrong while creating')
       })
-
 })
 
 //---------------------------------------------------------------
 
 
+//---------------------------------------------------------------
+/*DELETE REQUEST
 
+router.get('/search/create/:animeid', (req, res) => {
+  let animeid = req.params.animeid
+
+  AnimeModel.findById(animeid)
+     .then(() => {
+         res.redirect('/profile')
+     })
+     .catch(()=> {
+         console.log('Deleted failed!')
+     })
+})
+*/ 
 
 //---------------------------------------------------------------
 //EXPORT
