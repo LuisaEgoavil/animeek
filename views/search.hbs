@@ -1,6 +1,5 @@
-
 <div class="wrapper-top">
-  {{!-- <a class="logo"><button type="button" class="btn btn-warning"><img src="../images/logo.png" alt="logo"></button></a> --}}
+  <a class="logo"><button type="button" class="btn btn-warning"><img src="../images/logo.png" alt="logo"></button></a>
   <h1>Let's search and find your favorite</h1>
   <a href="/profile"><button type="button" class="btn btn-warning">Profile</button></a>
   <a href="/logout"><button type="button" class="btn btn-danger btn-sm">Logout</button></a>
@@ -20,24 +19,22 @@
       </nav>
 <br><br><br>
 
-
-
- 
 {{#each animeOptions}}
 <form method ="POST" action="/info/search/create/{{this._id}}">
 <div class="d-flex position-relative">
-  <img name="addimg"src="{{this.img}}" class="flex-shrink-0 me-3" alt="...">
+  <img src="{{this.img}}" class="flex-shrink-0 me-3" alt="...">
   <div>
-    <h5 name="addtitle" class="mt-0">{{this.title}}</h5>
-    <p name="addsynopsis">{{this.synopsis}}<a href="more" class="more">more</a></p>
-    <p name="addepisodes">🎬  &nbsp Episodes: {{this.episodes}}</p>
-    <p name="addscore">⭐  &nbsp Score of: {{this.score}}</p>
-    <button type="submit" class="btn btn-warning">Add it!</button>
+  
+    <h5 class="mt-0">{{this.title}}</h5>
+
+    <p>{{this.synopsis}}<a href="more" class="more">more</a></p>
+    <p>🎬  &nbsp Episodes: {{this.episodes}}</p>
+    <p>⭐  &nbsp Score of: {{this.score}}</p>
+    <a href="#" class="stretched-link"><button href="/addanime" type="button" class="btn btn-warning">Add it!</button></a>
     
   </div>
 </div>
 <br><br><br>
-</form>
 {{/each}}   
 
 

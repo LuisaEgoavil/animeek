@@ -70,14 +70,14 @@ h1 {
   display: flex;
 }
 
-.carousel-item {
+/* .carousel-item {
   margin: 0 15%;
-}
+} */
 
 .anime-img {
   width: 20%;
   height: auto;
-  margin: 0 4%;
+  margin: 0 auto;
 }
 
 
