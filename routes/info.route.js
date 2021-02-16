@@ -88,15 +88,21 @@ axios.request(options)
 
 //---------------------------------------------------------------
 //TRYING!!
-router.post('/info/search/create', (req, res) => {
-  
+
+router.post('/search/create/:animeid', (req, res) => {
+  console.log(req.session)
+
+   let animeid = req.params.animeid
+   console.log(animeid)
+
    const {addimg, addtitle, addepisodes, addscore, addsypnosis} = req.body
    let myNewAnimeObj = {
     title: addtitle,
     image_url: addimg,
     synopsis: addsypnosis,
     episodes: addepisodes,
-    score: addscore
+    score: addscore,
+    myUserId: req.session.userData._id
    }
 
    AnimeModel.create(myNewAnimeObj)
@@ -108,8 +114,8 @@ router.post('/info/search/create', (req, res) => {
           console.log('Something went wrong while creating')
       })
 
-
 })
+
 
 //---------------------------------------------------------------
 //EXPORT

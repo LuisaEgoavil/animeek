@@ -21,9 +21,10 @@
 <br><br><br>
 
 
-<form method ="POST" action="/info/search/create">
+
  
 {{#each animeOptions}}
+<form method ="POST" action="/info/search/create/{{this._id}}">
 <div class="d-flex position-relative">
   <img name="addimg"src="{{this.img}}" class="flex-shrink-0 me-3" alt="...">
   <div>
@@ -36,7 +37,8 @@
   </div>
 </div>
 <br><br><br>
-{{/each}}   
 </form>
+{{/each}}   
+
 
 
