@@ -133,7 +133,9 @@ router.get('/logout', (req, res) => {
 
 //--------------------------------------------------------------
 
-
+router.get("/about", (req, res, next)=>{
+  res.render("about")
+})
 
 
 
