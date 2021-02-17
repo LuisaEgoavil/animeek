@@ -1,6 +1,6 @@
 body {
   width: 100%;
-  padding: 70px;
+  padding: 30px 70px 70px 70px;
   /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
   font-family: 'Truculenta', sans-serif;
   background-color:  rgb(255, 209, 183);
@@ -14,7 +14,7 @@ h1 {
   color: 15px; 
   text-align: center;
   margin-top: 2% auto;
-  padding: 0 20% 0 22%;
+  padding: 0 20% 0 18%;
   font-size: 70px;
 }
 
@@ -50,12 +50,12 @@ h1 {
 }
 
 .wrapper-index p {
-  margin: 50px 0;
+  margin: 50px 0 20px;
   text-align: center;
 }
 
 .index-btn {
-  margin: 8% 0 0;
+  margin: 4% 0 0;
   display: flex;
   justify-content: center;
 }
