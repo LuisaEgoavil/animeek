@@ -23,7 +23,7 @@ h1 {
 /* -----layout Page----- */
 .wrapper-top {
   display: flex;
-  width: 80%;
+  width: 84%;
   margin: 0 auto;
   justify-content: space-between;
 }
@@ -33,7 +33,7 @@ h1 {
   height: auto;
 }
 
-.wrapper-top .btn-warning {
+.wrapper-top .logo .btn-warning {
   background-color: transparent;
   border: 4px solid #ffc077;
   padding: 0;
@@ -162,28 +162,49 @@ h1 {
 
 /* -----Profile Page----- */
 .logout button {
-  padding: 10% 24%;
+  padding: 18% 24%;
   font-size: 14px;
 }
 
+.add-list-btn {
+  height: fit-content;
+}
+
 .wrapper-profile {
-  width: 70%;
+  width: 76%;
   margin: 4% auto 0;
 }
 
 .wrapper-profile h2 {
+  display: inline-block;
+  padding-left: 20%;
   margin-bottom: 6%;
-  padding-left: 10%;
+  text-align: center;
 }
 
-.wrapper-profile .watch-list {
-  margin-top: 4%;
+.favorite-list {
+  margin-bottom: 10%;
+  background-color: #f9624a40;
+  padding: 2%;
+  border-radius: 10px;
 }
 
+.watch-list h3{
+  margin-bottom: 6%;
+}
+
+.watch-list p {
+  padding: 0 8% 0 4%;
+  font-size: 18px;
+}
+
+.watch-list .synopsis {
+  margin-bottom: 4%;
+}
 
 
 .wrapper-profile .btn {
-  margin: 1%;
+  margin: 1% 1% 1% 80%;
   padding: 10px 20px;
   font-size: 20px;
 }
