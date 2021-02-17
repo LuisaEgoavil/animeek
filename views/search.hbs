@@ -6,44 +6,39 @@
 </head>
 
 <body>
-<div class="wrapper-top">
-  
-  <h1>Let's search and find your favorite</h1>
-  <a href="/profile"><button type="button" class="btn btn-warning">Profile</button></a>
-  <a href="/logout"><button type="button" class="btn btn-danger btn-sm">Logout</button></a>
-</div>
+  <div class="wrapper-top">
+    <a class="logo"><button type="button" class="btn btn-warning"><img src="../images/logo.png" alt="logo"></button></a>
+    <h1>Time to find your favorite</h1>
+    <a href="/profile"><button type="button" class="btn btn-warning back-profile-btn">Back to Profile</button></a>
+    <a href="/logout" class="search-logout"><button type="button" class="btn btn-danger btn-sm">Logout</button></a>
+  </div>
 
-
-  <h4>Name</h4>
-  <br>
-<nav>
-<div>
-
-<form class="d-flex" method="GET" action="/info/search">
+  <div class="wrapper-search">
+    <div class="search-box">
+      <h4>Name</h4>
+      <form class="d-flex" method="GET" action="/info/search">
         <input id="anime-input" name="query" class="form-control me-2" type="text" placeholder="Type to search..." aria-label="Search">
         <button class="btn btn-outline-warning" type="submit">Search</button>
       </form>
+    </div>
+  {{#each animeOptions}}
+  <form method ="POST" action="/info/search/create/{{this.id}}">
+  <div class="wrapper-search-result">
+    <div class="d-flex position-relative ">
+      <img src="{{this.img}}" class="flex-shrink-0 me-3" alt="...">
+      <div class="watch-list">
+        <h5 class="mt-0">{{this.title}}</h5>
+        <p>{{this.synopsis}}<a href="more" class="more">more</a></p>
+        <p>🎬  &nbsp Episodes: {{this.episodes}}</p>
+        <p>⭐  &nbsp Score of: {{this.score}}</p>
+        <button type="submit" class="btn btn-warning">Add it!</button>
       </div>
-      </nav>
-<br><br><br>
-
-{{#each animeOptions}}
-<form method ="POST" action="/info/search/create/{{this.id}}">
-<div class="d-flex position-relative">
-  <img src="{{this.img}}" class="flex-shrink-0 me-3" alt="...">
-  
-  <div>
-    <h5 class="mt-0">{{this.title}}</h5>
-    <p>{{this.synopsis}}<a href="more" class="more">more</a></p>
-    <p>🎬  &nbsp Episodes: {{this.episodes}}</p>
-    <p>⭐  &nbsp Score of: {{this.score}}</p>
-    <button type="submit" class="btn btn-warning">Add it!</button>
+    </div>
   </div>
-</div>
 </form>
-<br><br><br>
-{{/each}}   
 
+{{/each}}
+</div>
 </body>
 
 
