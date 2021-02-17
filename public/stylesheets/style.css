@@ -168,7 +168,7 @@ h1 {
 .add-list-btn {
   height: fit-content;
   padding: 16px 12px;
-  margin-right: 2%;
+  margin-right: 40px;
   white-space: nowrap;
   font-size: 20px;
 }
@@ -213,9 +213,15 @@ h1 {
 }
 
 /* -----search Page----- */
+
+.search-top h1 {
+  padding: 0 14%;
+  white-space: nowrap;
+}
+
 .back-profile-btn {
   padding: 16px 12px;
-  margin-right: 20px;
+  margin-right: 40px;
   white-space: nowrap;
   font-size: 20px;
 }
@@ -224,6 +230,32 @@ h1 {
   padding: 18% 24%;
   font-size: 14px;
   margin-top: 30%;
+}
+
+.search-box {
+  margin: 4% 0;
+}
+
+.search-box label {
+  font-size: 32px;
+  margin-right: 1%;
+}
+
+.search-box form {
+  width: 80%;
+  margin: 6% auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box .btn {
+  color: #000;
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.search-box input {
+  width: 50%;
 }
 
 
