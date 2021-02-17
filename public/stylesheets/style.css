@@ -1,6 +1,6 @@
 body {
   width: 100%;
-  padding: 70px;
+  padding: 30px 70px 70px 70px;
   /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
   font-family: 'Truculenta', sans-serif;
   background-color:  rgb(255, 209, 183);
@@ -14,7 +14,7 @@ h1 {
   color: 15px; 
   text-align: center;
   margin-top: 2% auto;
-  padding: 0 20% 0 22%;
+  padding: 0 20% 0 18%;
   font-size: 70px;
 }
 
@@ -50,12 +50,12 @@ h1 {
 }
 
 .wrapper-index p {
-  margin: 50px 0;
+  margin: 50px 0 20px;
   text-align: center;
 }
 
 .index-btn {
-  margin: 8% 0 0;
+  margin: 4% 0 0;
   display: flex;
   justify-content: center;
 }
@@ -168,7 +168,7 @@ h1 {
 .add-list-btn {
   height: fit-content;
   padding: 16px 12px;
-  margin-right: 2%;
+  margin-right: 40px;
   white-space: nowrap;
   font-size: 20px;
 }
@@ -186,7 +186,7 @@ h1 {
 }
 
 .favorite-list {
-  margin-bottom: 10%;
+  margin-bottom: 4%;
   background-color: #f9624a40;
   padding: 2%;
   border-radius: 10px;
@@ -194,6 +194,9 @@ h1 {
 
 .watch-list h3{
   margin-bottom: 6%;
+  border-bottom: double 5px #ec8530;
+  text-align: center;
+  padding-top: 3%;
 }
 
 .watch-list p {
@@ -213,9 +216,15 @@ h1 {
 }
 
 /* -----search Page----- */
+
+.search-top h1 {
+  padding: 0 14%;
+  white-space: nowrap;
+}
+
 .back-profile-btn {
   padding: 16px 12px;
-  margin-right: 20px;
+  margin-right: 40px;
   white-space: nowrap;
   font-size: 20px;
 }
@@ -226,5 +235,69 @@ h1 {
   margin-top: 30%;
 }
 
+.search-box {
+  margin: 4% 0;
+}
 
-/*# sourceMappingURL=style.css.map */
+.search-box label {
+  font-size: 32px;
+  margin-right: 1%;
+}
+
+.search-box form {
+  width: 80%;
+  margin: 6% auto 0;
+  display: flex;
+  justify-content: center;
+}
+
+.search-box .btn {
+  color: #000;
+  background-color: #ffc107;
+  border-color: #ffc107;
+}
+
+.search-box input {
+  width: 50%;
+}
+
+.wrapper-search-result {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.search-result {
+  margin-bottom: 2%;
+  margin-right: 1%;
+  width: 48%;
+  background-color: #f9624a40;
+  padding: 2%;
+  border-radius: 10px;
+}
+
+.watch-list h5 {
+  font-size: 20px;
+  text-align: center;
+  border-bottom: double 5px #ec8530;
+  margin-bottom: 4%;
+}
+
+.watch-list p {
+  margin-bottom: 3%;
+}
+
+.watch-list .more {
+  margin-left: 3%;
+}
+
+.watch-list button {
+  margin-left: 70%;
+  font-size: 20px;
+  border: 2px solid rgb(255, 220, 106);
+  padding: 2% 4%;
+}
+
+
+
+/* # sourceMappingURL=style.css.map */

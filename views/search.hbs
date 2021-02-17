@@ -2,44 +2,45 @@
   <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous">
   <link rel="preconnect" href="https://fonts.gstatic.com">
   <link href="https://fonts.googleapis.com/css2?family=Truculenta:wght@600&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../stylesheets/style.css" />
+  <link rel="stylesheet" href="/stylesheets/style.css" />
 </head>
 
-<body>
-  <div class="wrapper-top">
+
+  <div class="wrapper-top search-top">
     <a class="logo"><button type="button" class="btn btn-warning"><img src="../images/logo.png" alt="logo"></button></a>
-    <h1>Time to find your favorite</h1>
-    <a href="/profile"><button type="button" class="btn btn-warning back-profile-btn">Back to Profile</button></a>
+    <h1>Let's find your favorite</h1>
+    <a href="/profile"><button type="button" class="btn btn-warning back-profile-btn">Back to my Profile</button></a>
     <a href="/logout" class="search-logout"><button type="button" class="btn btn-danger btn-sm">Logout</button></a>
   </div>
 
   <div class="wrapper-search">
     <div class="search-box">
-      <h4>Name</h4>
       <form class="d-flex" method="GET" action="/info/search">
+        <label>Keyword</label>
         <input id="anime-input" name="query" class="form-control me-2" type="text" placeholder="Type to search..." aria-label="Search">
         <button class="btn btn-outline-warning" type="submit">Search</button>
       </form>
     </div>
-  {{#each animeOptions}}
-  <form method ="POST" action="/info/search/create/{{this.id}}">
-  <div class="wrapper-search-result">
-    <div class="d-flex position-relative ">
-      <img src="{{this.img}}" class="flex-shrink-0 me-3" alt="...">
-      <div class="watch-list">
-        <h5 class="mt-0">{{this.title}}</h5>
-        <p>{{this.synopsis}}<a href="more" class="more">more</a></p>
-        <p>🎬  &nbsp Episodes: {{this.episodes}}</p>
-        <p>⭐  &nbsp Score of: {{this.score}}</p>
-        <button type="submit" class="btn btn-warning">Add it!</button>
-      </div>
-    </div>
-  </div>
-</form>
 
-{{/each}}
+  <div class="wrapper-search-result">
+  {{#each animeOptions}}
+  <form class="search-result" method ="POST" action="/info/search/create/{{this.id}}">
+      <div class="d-flex position-relative ">
+        <img src="{{this.img}}" class="flex-shrink-0 me-3" alt="...">
+        <div class="watch-list">
+          <h5 class="mt-0">{{this.title}}</h5>
+          <p>{{this.synopsis}}<a href="more" class="more">more</a></p>
+          
+          <p>🎬  &nbsp Episodes: {{this.episodes}}</p>
+          <p>⭐  &nbsp Score of: {{this.score}}</p>
+          <button type="submit" class="btn btn-warning">Add it!</button>
+        </div>
+      </div>
+  </form>
+  {{/each}}
+  </div>
 </div>
-</body>
+
 
 
 

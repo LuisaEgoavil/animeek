@@ -5,4 +5,6 @@ router.get("/", (req, res, next) => {
   res.render("index", {title: 'Welcome to Animeek!'});
 });
 
+
+
 module.exports = router;
