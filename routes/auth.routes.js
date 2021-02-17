@@ -14,6 +14,7 @@ router.get('/signup', (req, res, next) => {
   res.render('auth/signup.hbs')
 });
 
+
 //--------------------------------------------------------------
 //POST REQUEST TO SIGNUP
 router.post('/signup', (req, res, next) => {
@@ -131,14 +132,10 @@ router.get('/logout', (req, res) => {
   res.redirect('/')
 })
 
-//--------------------------------------------------------------
-//ABOUT US
-
-router.get('/about', (req, res, next) => {
-  res.render('about.hbs')
-});
-
-
+//GO TO ABOUT PAGE
+router.get("/about", (req, res, next)=>{
+  res.render("about")
+})
 
 
 
