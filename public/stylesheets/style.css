@@ -25,6 +25,7 @@ h1 {
   display: flex;
   width: 80%;
   margin: 0 auto;
+  justify-content: space-between;
 }
 
 .wrapper-top img {
@@ -161,13 +162,18 @@ h1 {
 
 /* -----Profile Page----- */
 .logout button {
-  padding: 10px 20px;
-  font-size: 24px;
+  padding: 10% 24%;
+  font-size: 14px;
 }
 
 .wrapper-profile {
-  width: 98%;
+  width: 70%;
   margin: 4% auto 0;
+}
+
+.wrapper-profile h2 {
+  margin-bottom: 6%;
+  padding-left: 10%;
 }
 
 .wrapper-profile .btn {
