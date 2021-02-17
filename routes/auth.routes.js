@@ -111,6 +111,20 @@ router.get('/profile', checkLoggedInUser, (req, res, next) => {
 })
 })
 
+router.post('/profile/:animeid/delete', (req, res, next) => {
+  let animeid = req.params.animeid
+
+  AnimeModel.findByIdAndDelete(animeid)
+     .then(() => {
+         res.redirect('/profile')
+         //console.log('deleted anime')
+     })
+     .catch(()=> {
+         console.log('error')
+         //console.log('Deleted failed!')
+     })
+})
+
 //--------------------------------------------------------------
 router.get('/logout', (req, res) => {
   req.session.destroy()

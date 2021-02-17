@@ -6,23 +6,25 @@
 
 <div class="wrapper-profile">
   <h2>This is your Watchlist so far:</h2>
-<br><br>
+<br>
+<br>
+
 {{#each result}}
 <div class="d-flex position-relative">
-  <img src="{{this.img}}" class="flex-shrink-0 me-3" alt="...">
-  <div>
   
+  <img src="{{this.image_url}}" class="flex-shrink-0 me-3" alt="...">
+  
+  <div>
     <h5 class="mt-0">{{this.title}}</h5>
-
     <p>{{this.synopsis}}<a href="more" class="more">more</a></p>
     <p>🎬  &nbsp Episodes: {{this.episodes}}</p>
     <p>⭐  &nbsp Score of: {{this.score}}</p>
-    
   </div>
+
 </div>
 
-<form method="POST" action="/result/{{this.id}}/delete">
-    <button type="button" class="btn btn-warning">Delete</button>
+<form method="POST" action="/profile/{{this.id}}/delete">
+    <button type="submit" class="btn btn-warning">Delete</button>
 </form>
 
 {{/each}}

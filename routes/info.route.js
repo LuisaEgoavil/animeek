@@ -28,11 +28,18 @@ router.get('/add', (req, res)=> {
 
 //--------------------------------------------------------------
 
-router.post('/search', (req, res) => {
+router.get('/search', (req, res) => {
   
   //GRAB THE CODE FROM JIKAN
-let searchAnime = req.body 
+let searchAnime = req.query 
   
+/*
+req = {
+  query: {
+    query: Naruto
+  }
+}
+*/
 const axios = require("axios").default;
 
 let options = {
@@ -77,6 +84,7 @@ axios.request(options)
         })
         //saving our anime in the session to use it in future
         req.session.animeOptions = animeOptions
+        req.session.searchQuery = searchAnime.query// Naruto
 
         res.render('search', {animeOptions})
     })
@@ -115,10 +123,10 @@ router.post('/search/create/:animeid', (req, res) => {
     animeid: id,
     myUserId: req.session.userData._id
    }
-
+   console.log(req.session.searchQuery)
    AnimeModel.create(myNewAnimeObj)
       .then(()=> {
-        res.redirect('/profile')
+        res.redirect(`/info/search?query=${req.session.searchQuery}`)
         
       })
       .catch(()=> {
@@ -128,25 +136,19 @@ router.post('/search/create/:animeid', (req, res) => {
    
 })
 
-
-//---------------------------------------------------------------
-//DELETE REQUEST
-
-router.post('/search/:animeid/delete', (req, res, next) => {
+router.post('/profile/:animeid/delete', (req, res, next) => {
   let animeid = req.params.animeid
 
   AnimeModel.findByIdAndDelete(animeid)
      .then(() => {
          res.redirect('/profile')
-         console.log('deleted anime')
-         //res.render('/profile')
+         //console.log('deleted anime')
      })
      .catch(()=> {
-       console.log('error')
-         console.log('Deleted failed!')
+         console.log('error')
+         //console.log('Deleted failed!')
      })
 })
-
 
 //---------------------------------------------------------------
 //EXPORT
