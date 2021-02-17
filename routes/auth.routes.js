@@ -44,7 +44,7 @@ router.post('/signup', (req, res, next) => {
      let hash = bcrypt.hashSync(password, salt);
      UserModel.create({name, email, password: hash})
         .then(() => {
-            res.redirect('/')
+            res.redirect('/login') /// it was /
         })
         .catch((err) => {
             next(err)
@@ -132,7 +132,11 @@ router.get('/logout', (req, res) => {
 })
 
 //--------------------------------------------------------------
+//ABOUT US
 
+router.get('/about', (req, res, next) => {
+  res.render('about.hbs')
+});
 
 
 
