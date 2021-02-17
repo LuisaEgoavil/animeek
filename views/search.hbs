@@ -21,23 +21,24 @@
         <button class="btn btn-outline-warning" type="submit">Search</button>
       </form>
     </div>
-  {{#each animeOptions}}
-  <form method ="POST" action="/info/search/create/{{this.id}}">
-  <div class="wrapper-search-result">
-    <div class="d-flex position-relative ">
-      <img src="{{this.img}}" class="flex-shrink-0 me-3" alt="...">
-      <div class="watch-list">
-        <h5 class="mt-0">{{this.title}}</h5>
-        <p>{{this.synopsis}}<a href="more" class="more">more</a></p>
-        <p>🎬  &nbsp Episodes: {{this.episodes}}</p>
-        <p>⭐  &nbsp Score of: {{this.score}}</p>
-        <button type="submit" class="btn btn-warning">Add it!</button>
-      </div>
-    </div>
-  </div>
-</form>
 
-{{/each}}
+  <div class="wrapper-search-result">
+  {{#each animeOptions}}
+  <form class="search-result" method ="POST" action="/info/search/create/{{this.id}}">
+      <div class="d-flex position-relative ">
+        <img src="{{this.img}}" class="flex-shrink-0 me-3" alt="...">
+        <div class="watch-list">
+          <h5 class="mt-0">{{this.title}}</h5>
+          <p>{{this.synopsis}}<a href="more" class="more">more</a></p>
+          
+          <p>🎬  &nbsp Episodes: {{this.episodes}}</p>
+          <p>⭐  &nbsp Score of: {{this.score}}</p>
+          <button type="submit" class="btn btn-warning">Add it!</button>
+        </div>
+      </div>
+  </form>
+  {{/each}}
+  </div>
 </div>
 
 
