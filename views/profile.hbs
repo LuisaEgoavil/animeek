@@ -8,8 +8,8 @@
   <h2>{{name}}'s favorite wathing list</h2>
   <a href="/info/add" class="btn btn-warning">Add another anime to your Watchlist!</a>
   {{#each result}}
-  <div class="d-flex position-relative">
-    <img src="{{this.img}}" class="flex-shrink-0 me-3" alt="...">
+  <div class="d-flex position-relative watch-list">
+    <img src="{{this.image_url}}" class="flex-shrink-0 me-3" alt="...">
   <div>
   <h5 class="mt-0">{{this.title}}</h5>
   <p>{{this.synopsis}}<a href="more" class="more">more</a></p>

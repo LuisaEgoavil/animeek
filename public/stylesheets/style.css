@@ -176,6 +176,12 @@ h1 {
   padding-left: 10%;
 }
 
+.wrapper-profile .watch-list {
+  margin-top: 4%;
+}
+
+
+
 .wrapper-profile .btn {
   margin: 1%;
   padding: 10px 20px;
