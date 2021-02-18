@@ -1,7 +1,6 @@
 body {
   width: 100%;
   padding: 20px 70px 10px;
-  /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
   font-family: 'Truculenta', sans-serif;
   background-color:  rgb(255, 209, 183);
 }
@@ -179,7 +178,7 @@ h1 {
   bottom: 0;
   left: 6%;
   width: 100%;
-  margin-bottom: 2%;
+  margin-bottom: 10%;
 }
 
 /* -----Profile Page----- */
@@ -251,7 +250,7 @@ h1 {
 
 .profile-footer {
   position: fixed;
-  left:7%;
+  left:35%;
   bottom: 0;
   width: 100;
   background-color:  rgb(255, 209, 183);
@@ -343,18 +342,13 @@ h1 {
 
 .search-footer {
   position: fixed;
-  left: 9%;
+  left: 5%;
   bottom: 0;
-  width: 100%;
   background-color:  rgb(255, 209, 183);
-  padding: 0 0 1%;
+  padding: 0 0 1% 30%;
 }
 
 /* -----footer----- */
-footer {
-  text-align: center;
-  margin-top: 3%;
-}
 
 footer p {
   padding-top: 2px;
@@ -364,10 +358,11 @@ footer p {
 
 .index-footer,
 .login-footer,
-.signup-footer {
+.signup-footer,
+.notfound-footer {
   position: fixed;
   bottom: 0;
-  left: 10%;
+  left: 35%;
   width: 100%;
   margin-bottom: 2%;
 }
@@ -375,10 +370,6 @@ footer p {
 /* -----About Page----- */
 .about-title {
   padding: 0 40% 0 16%;
-}
-
-.about-footer {
-  margin-top: 4%;
 }
 
 /* -----aboutus.hbs page----- */
@@ -399,8 +390,13 @@ footer p {
   padding: 0 20% 0 20%;
 }
 
-.aboutus-footer {
+.aboutus-footer,
+.about-footer {
   margin-top: 4%;
+  position: fixed;
+  left: 35%;
+  bottom: 0;
+  padding-bottom: 1%;
 }
 
 .container-about {
@@ -537,4 +533,3 @@ footer p {
   width: 50%;
   height: auto;
 }
-/* # sourceMappingURL=style.css.map */
