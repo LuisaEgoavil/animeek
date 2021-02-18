@@ -72,12 +72,12 @@ router.post('/login', (req, res, next) => {
                     res.redirect('/profile')
                   }
                   else{
-                    res.render('auth/login.hbs', {msg: 'Incorrect password'})
+                    res.render('auth/login.hbs', {msg: 'Incorrect password 🔑'})
                   }
               })
         }
         else {
-          res.render('auth/login.hbs', {msg: 'Email does not exist'})
+          res.render('auth/login.hbs', {msg: 'Sorry, this email does not exist 📧'})
         }
       })
       .catch((err)=>{
@@ -100,9 +100,11 @@ const checkLoggedInUser = (req, res, next) => {
 //GUET REQUEST TO HANDLE THE PROFILE
 router.get('/profile', checkLoggedInUser, (req, res, next) => {
   let name = req.session.userData.name
+  let id = req.session.userData._id
+  
   
   //this will give us the selected animes in the profile
-  AnimeModel.find()
+  AnimeModel.find({myUserId: id})
     .then((result) =>{
       //console.log('animeid', result)
       res.render('profile.hbs', {result, name})
