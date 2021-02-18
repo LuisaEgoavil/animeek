@@ -107,7 +107,7 @@ h1 {
 
 .error {
   text-align: center;
-  font-size: 50px;
+  font-size: 30px;
   color: #ff0000;
   border: 2px solid;
 }
@@ -177,9 +177,9 @@ h1 {
 .signup-footer {
   position: fixed;
   bottom: 0;
-  left: 10%;
+  left: 6%;
   width: 100%;
-  margin-bottom: 2%;
+  margin-bottom: 1%;
 }
 
 /* -----Profile Page----- */
@@ -259,7 +259,6 @@ h1 {
 }
 
 /* -----search Page----- */
-
 .search-top h1 {
   padding: 0 14%;
   white-space: nowrap;
@@ -343,7 +342,7 @@ h1 {
 
 .search-footer {
   position: fixed;
-  left: 9%;
+  left: 7%;
   bottom: 0;
   width: 100%;
   background-color:  rgb(255, 209, 183);
@@ -351,11 +350,6 @@ h1 {
 }
 
 /* -----footer----- */
-footer {
-  text-align: center;
-  margin-top: 3%;
-}
-
 footer p {
   padding-top: 2px;
   display: inline-block;
@@ -367,7 +361,7 @@ footer p {
 .signup-footer {
   position: fixed;
   bottom: 0;
-  left: 10%;
+  left: 35%;
   width: 100%;
   margin-bottom: 2%;
 }
