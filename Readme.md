@@ -8,13 +8,13 @@ Animeek is a web app where you can search for any anime add add it to your Watch
 
 ## Data Sctructure
 
-### routes
+### ⋅⋅* routes
 
 #### auth.routes.js
 #### index.js
 #### info.routes.js
 ***
-### views
+### ⋅⋅* views
 
 #### auth
 #### login.hbs
@@ -36,6 +36,8 @@ Animeek is a web app where you can search for any anime add add it to your Watch
 Take a look to the App in Heroku: <https://animeek.herokuapp.com/>
 
 ## Presentation Slides
+
+Google Slides: <https://docs.google.com/presentation/d/1ZoPmUyrE_gwN_3oM0WyNOJOVQOw_kX14odB-0B9SsvE/edit?usp=sharing>
 
 
 
