@@ -1,6 +1,6 @@
 body {
   width: 100%;
-  padding: 0 70px 10px;
+  padding: 20px 70px 10px;
   /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
   font-family: 'Truculenta', sans-serif;
   background-color:  rgb(255, 209, 183);
@@ -160,13 +160,21 @@ h1 {
 }
 
 .login-footer {
-  margin-top: 4%;
+  margin-top: 6%;
 }
 
 /* -----Profile Page----- */
 .profile-top {
   padding: 0 17% 0 24%;
 }
+
+.profile-logo {
+  width: 80px;
+  height: 80px;
+  border: 1px solid #fff;
+  border-radius: 50%;
+}
+
 
 .logout button {
   padding: 18% 24%;
@@ -310,7 +318,7 @@ h1 {
 /* -----footer----- */
 footer {
   text-align: center;
-  margin-top: 8%;
+  margin-top: 7%;
 }
 
 footer p {
@@ -325,7 +333,7 @@ footer p {
 }
 
 .about-footer {
-  margin-top: 5%;
+  margin-top: 4%;
 }
 
 /* -----aboutus.hbs page----- */
@@ -334,7 +342,7 @@ footer p {
 }
 
 .aboutus-footer {
-  margin-top: 2%;
+  margin-top: 4%;
 }
 
 
