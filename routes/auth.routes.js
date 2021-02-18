@@ -28,22 +28,22 @@ router.post('/signup', (req, res, next) => {
 
   //VALIDATE THE RIGHT FORMAT OF THE EMAIL
   let re = /\S+@\S+\.\S+/;
-     if (!re.test(email)) {
+    if (!re.test(email)) {
         res.render('auth/signup', {msg: 'Email not in valid format'})
         return;
-     }
+    }
 
   //VALIDATE PASSWWORD (CHARACTERS AND SO)
   /*let regexPass = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{8,20}$/;
-     if (!regexPass.test(password)) {
+    if (!regexPass.test(password)) {
         res.render('auth/signup', {msg: 'Password needs to have special chanracters, some numbers and be 6 characters aatleast'})
         return;
-     }*/
+    }*/
 
   //CREATE A SALT (ENCRYPT PASSWORD)
   let salt = bcrypt.genSaltSync(10);
-     let hash = bcrypt.hashSync(password, salt);
-     UserModel.create({name, email, password: hash})
+    let hash = bcrypt.hashSync(password, salt);
+    UserModel.create({name, email, password: hash})
         .then(() => {
             res.redirect('/login') /// it was /
         })
@@ -116,14 +116,14 @@ router.post('/profile/:animeid/delete', (req, res, next) => {
   let animeid = req.params.animeid
 
   AnimeModel.findByIdAndDelete(animeid)
-     .then(() => {
-         res.redirect('/profile')
+    .then(() => {
+        res.redirect('/profile')
          //console.log('deleted anime')
-     })
-     .catch(()=> {
-         console.log('error')
+    })
+    .catch(()=> {
+        console.log('error')
          //console.log('Deleted failed!')
-     })
+    })
 })
 
 //--------------------------------------------------------------
