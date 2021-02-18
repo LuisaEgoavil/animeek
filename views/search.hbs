@@ -26,10 +26,10 @@
   {{#each animeOptions}}
   <form class="search-result" method ="POST" action="/info/search/create/{{this.id}}">
       <div class="d-flex position-relative ">
-        <img src="{{this.img}}" class="flex-shrink-0 me-3" alt="...">
+        <img src="{{this.img}}" class="flex-shrink-0 me-3">
         <div class="watch-list">
           <h5 class="mt-0">{{this.title}}</h5>
-          <p>{{this.synopsis}}<a href="more" class="more">more</a></p>
+          <p>{{this.synopsis}}</p>
           
           <p>🎬  &nbsp Episodes: {{this.episodes}}</p>
           <p>⭐  &nbsp Score of: {{this.score}}</p>
