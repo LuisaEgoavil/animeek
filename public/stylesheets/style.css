@@ -133,7 +133,8 @@ h1 {
 }
 
 .signup-btn {
-  margin-bottom: 4%;
+  margin-bottom: 2%;
+  margin-top: 8%;
 }
 
 .signup-btn button,
@@ -318,7 +319,7 @@ h1 {
 /* -----footer----- */
 footer {
   text-align: center;
-  margin-top: 7%;
+  margin-top: 3%;
 }
 
 footer p {
