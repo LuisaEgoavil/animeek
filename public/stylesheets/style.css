@@ -160,6 +160,8 @@ h1 {
   padding-left: 2%;
 }
 
+
+
 .login-footer {
   margin-top: 6%;
 }
@@ -346,7 +348,6 @@ footer p {
   margin-top: 4%;
 }
 
-
 .container-about {
   width: 60%;
   margin: 2% auto 0;
@@ -355,6 +356,10 @@ footer p {
 .wrap-card {
   display: flex;
 }
+
+/* .card-body {
+  background-color:  rgb(255, 209, 183);
+} */
 
 .wrap-card:first-child {
   margin-bottom: 2%;
@@ -371,6 +376,7 @@ footer p {
 .card {
   width: 288px;
   height: auto;
+  background-color: rgb(255, 183, 142);
 }
 
 .card h2 {
