@@ -38,8 +38,6 @@ Animeek is a web app where you can search for any anime add add it to your Watch
 ⋅⋅* profile.hbs
 ⋅⋅* search.hbs
 
-
-
 ***
 
 ## Heroku
