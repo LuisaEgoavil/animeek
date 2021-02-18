@@ -160,8 +160,6 @@ h1 {
   padding-left: 2%;
 }
 
-
-
 .login-footer {
   margin-top: 6%;
 }
@@ -177,7 +175,6 @@ h1 {
   border: 1px solid #fff;
   border-radius: 50%;
 }
-
 
 .logout button {
   padding: 18% 24%;
@@ -228,11 +225,19 @@ h1 {
   margin-bottom: 4%;
 }
 
-
 .wrapper-profile .btn {
   margin: 1% 1% 1% 80%;
   padding: 10px 20px;
   font-size: 20px;
+}
+
+.profile-footer {
+  position: fixed;
+  left: 10%;
+  bottom: 0;
+  width: 100;
+  background-color:  rgb(255, 209, 183);
+  padding-bottom: 1%;
 }
 
 /* -----search Page----- */
@@ -318,6 +323,15 @@ h1 {
   padding: 2% 4%;
 }
 
+.search-footer {
+  position: fixed;
+  left: 10%;
+  bottom: 0;
+  width: 100;
+  background-color:  rgb(255, 209, 183);
+  padding: 0 20% 1%;
+}
+
 /* -----footer----- */
 footer {
   text-align: center;
@@ -340,8 +354,21 @@ footer p {
 }
 
 /* -----aboutus.hbs page----- */
+.aboutus-header {
+  margin-left: 15%;
+  display: flex;
+  justify-content: center;
+}
+.aboutus-header a {
+  margin-right: 1%;
+}
+
+.aboutus-header button {
+  margin-right: 1%;
+}
+
 .aboutus-title {
-  padding: 0 20% 0 35%;;
+  padding: 0 20% 0 20%;
 }
 
 .aboutus-footer {
@@ -356,10 +383,6 @@ footer p {
 .wrap-card {
   display: flex;
 }
-
-/* .card-body {
-  background-color:  rgb(255, 209, 183);
-} */
 
 .wrap-card:first-child {
   margin-bottom: 2%;
@@ -397,7 +420,7 @@ footer p {
 }
 
 .arrow-left{
-  margin: 4% 0 0 10%;
+  margin: 2% 0 0 10%;
   position:relative;
   width:60%;
   height: 30%;
@@ -433,7 +456,7 @@ footer p {
 .arrow-right{
   margin: 8% 10% 0 0;
   position:relative;
-  width:50%;
+  width:60%;
   height:30%;
   background: radial-gradient(#F2B9A1, #EA6264);
   padding:10px;
@@ -468,6 +491,7 @@ footer p {
 .not-found-page h1 {
   padding: 0 38% 0 10%;
 }
+
 .error-main {
   width: 80%;
   text-align: center;
