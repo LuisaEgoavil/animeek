@@ -1,4 +1,4 @@
-# Animeek
+# Animeek ###### © 2021 created by Lupita and Megumi, Powered by 🐺 House Stark!
 
 ## Description
 
