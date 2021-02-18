@@ -28,22 +28,22 @@ router.post('/signup', (req, res, next) => {
 
   //VALIDATE THE RIGHT FORMAT OF THE EMAIL
   let re = /\S+@\S+\.\S+/;
-     if (!re.test(email)) {
+    if (!re.test(email)) {
         res.render('auth/signup', {msg: 'Email not in valid format'})
         return;
-     }
+    }
 
   //VALIDATE PASSWWORD (CHARACTERS AND SO)
   /*let regexPass = /^(?=.*\d)(?=.*[A-Z])(?=.*[a-z])(?=.*[a-zA-Z!#$%&? "])[a-zA-Z0-9!#$%&?]{8,20}$/;
-     if (!regexPass.test(password)) {
+    if (!regexPass.test(password)) {
         res.render('auth/signup', {msg: 'Password needs to have special chanracters, some numbers and be 6 characters aatleast'})
         return;
-     }*/
+    }*/
 
   //CREATE A SALT (ENCRYPT PASSWORD)
   let salt = bcrypt.genSaltSync(10);
-     let hash = bcrypt.hashSync(password, salt);
-     UserModel.create({name, email, password: hash})
+    let hash = bcrypt.hashSync(password, salt);
+    UserModel.create({name, email, password: hash})
         .then(() => {
             res.redirect('/login') //
         })
@@ -63,21 +63,19 @@ router.post('/login', (req, res, next) => {
 
         //IF THE USER EXISTS
         if(result) {
-
           bcrypt.compare(password, result.password)
               .then((isMatching) => {
                   if(isMatching) {
-                    req.session.userData = result
-                    req.session.areyoutired = false
+                    req.session.userData = result;
                     res.redirect('/profile')
                   }
                   else{
-                    res.render('auth/login.hbs', {msg: 'Incorrect password'})
+                    res.render('auth/login.hbs', {msg: 'Incorrect password 🔑'})
                   }
               })
         }
         else {
-          res.render('auth/login.hbs', {msg: 'Email does not exist'})
+          res.render('auth/login.hbs', {msg: 'Sorry, this email does not exist 📧'})
         }
       })
       .catch((err)=>{
@@ -100,9 +98,11 @@ const checkLoggedInUser = (req, res, next) => {
 //GUET REQUEST TO HANDLE THE PROFILE
 router.get('/profile', checkLoggedInUser, (req, res, next) => {
   let name = req.session.userData.name
+  let id = req.session.userData._id
+  
   
   //this will give us the selected animes in the profile
-  AnimeModel.find()
+  AnimeModel.find({myUserId: id})
     .then((result) =>{
       //console.log('animeid', result)
       res.render('profile.hbs', {result, name})
@@ -116,14 +116,14 @@ router.post('/profile/:animeid/delete', (req, res, next) => {
   let animeid = req.params.animeid
 
   AnimeModel.findByIdAndDelete(animeid)
-     .then(() => {
-         res.redirect('/profile')
+    .then(() => {
+        res.redirect('/profile')
          //console.log('deleted anime')
-     })
-     .catch(()=> {
-         console.log('error')
+    })
+    .catch(()=> {
+        console.log('error')
          //console.log('Deleted failed!')
-     })
+    })
 })
 
 //--------------------------------------------------------------
@@ -137,8 +137,13 @@ router.get("/about", (req, res, next)=>{
   res.render("about")
 })
 
+router.get("/aboutus", (req, res, next)=>{
+  res.render("aboutus")
+})
 
 
 
 //EXPORT
 module.exports = router;
+
+

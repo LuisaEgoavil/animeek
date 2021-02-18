@@ -8,13 +8,13 @@ router.get('/animeinfo', (req, res, next) => {
 
   
   AnimeModel.find()
-     .then((title)=> {
-       res.render('title', {title})
-       console.log(title)
-     })
-     .catch((error)=> {
-       next(error)
-     })
+    .then((title)=> {
+      res.render('title', {title})
+      console.log(title)
+    })
+    .catch((error)=> {
+      next(error)
+    })
 
 });
 
@@ -98,8 +98,8 @@ axios.request(options)
 
 router.post('/search/create/:animeid', (req, res) => {
 
-   let animeid = req.params.animeid 
-   console.log('our anime id ', animeid)
+  let animeid = req.params.animeid 
+  console.log('our anime id ', animeid)
 
   // all our animes are present in req.session.animeOptions
   // the user anime id is present in `animeid`
@@ -114,7 +114,7 @@ router.post('/search/create/:animeid', (req, res) => {
 
   //console.log('Anime', ourAnime)
   const {img, id, title, synopsis, episodes, score} = ourAnime
-   let myNewAnimeObj = {
+  let myNewAnimeObj = {
     title,
     image_url: img,
     synopsis,
@@ -122,9 +122,9 @@ router.post('/search/create/:animeid', (req, res) => {
     score,
     animeid: id,
     myUserId: req.session.userData._id
-   }
-   console.log(req.session.searchQuery)
-   AnimeModel.create(myNewAnimeObj)
+  }
+  console.log(req.session.searchQuery)
+  AnimeModel.create(myNewAnimeObj)
       .then(()=> {
         res.redirect(`/info/search?query=${req.session.searchQuery}`)
         
@@ -133,21 +133,20 @@ router.post('/search/create/:animeid', (req, res) => {
           console.log('Something went wrong while creating')
       })
 
-   
 })
 
 router.post('/profile/:animeid/delete', (req, res, next) => {
   let animeid = req.params.animeid
 
   AnimeModel.findByIdAndDelete(animeid)
-     .then(() => {
-         res.redirect('/profile')
+    .then(() => {
+        res.redirect('/profile')
          //console.log('deleted anime')
-     })
-     .catch(()=> {
-         console.log('error')
+    })
+    .catch(()=> {
+        console.log('error')
          //console.log('Deleted failed!')
-     })
+    })
 })
 
 //---------------------------------------------------------------
