@@ -178,11 +178,7 @@ h1 {
   bottom: 0;
   left: 6%;
   width: 100%;
-<<<<<<< HEAD
-  margin-bottom: 1%;
-=======
   margin-bottom: 10%;
->>>>>>> edd270359d06463d68bec8534ed6ad37120bff2d
 }
 
 /* -----Profile Page----- */
@@ -345,21 +341,13 @@ h1 {
 
 .search-footer {
   position: fixed;
-<<<<<<< HEAD
-  left: 7%;
-=======
   left: 5%;
->>>>>>> edd270359d06463d68bec8534ed6ad37120bff2d
   bottom: 0;
   background-color:  rgb(255, 209, 183);
   padding: 0 0 1% 30%;
 }
 
 /* -----footer----- */
-<<<<<<< HEAD
-=======
-
->>>>>>> edd270359d06463d68bec8534ed6ad37120bff2d
 footer p {
   padding-top: 2px;
   display: inline-block;
