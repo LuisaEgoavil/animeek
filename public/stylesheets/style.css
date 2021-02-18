@@ -131,6 +131,10 @@ h1 {
   margin: 20% 0;
 }
 
+.signup-btn {
+  margin-bottom: 4%;
+}
+
 .signup-btn button,
 .login-btn button {
   padding: 16px 30px;
@@ -319,6 +323,9 @@ footer .btn {
 }
 
 /* -----About Page----- */
+.about-top {
+  padding: 0 18% 0 22%;
+}
 .container-about {
   width: 60%;
   margin: 2% auto 0;
