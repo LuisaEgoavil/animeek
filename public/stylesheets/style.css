@@ -131,6 +131,10 @@ h1 {
   margin: 20% 0;
 }
 
+.signup-btn {
+  margin-bottom: 4%;
+}
+
 .signup-btn button,
 .login-btn button {
   padding: 16px 30px;
@@ -311,6 +315,10 @@ footer p {
 }
 
 /* -----About Page----- */
+.about-top {
+  padding: 0 30% 0 16%;
+}
+
 .container-about {
   width: 60%;
   margin: 2% auto 0;
@@ -318,6 +326,10 @@ footer p {
 
 .wrap-card {
   display: flex;
+}
+
+.wrap-card:first-child {
+  margin-bottom: 2%;
 }
 
 .wrap-card:nth-child(even) {
@@ -351,9 +363,9 @@ footer p {
 }
 
 .arrow-left{
-  margin: 8% 0 0 10%;
+  margin: 4% 0 0 10%;
   position:relative;
-  width:50%;
+  width:60%;
   height: 30%;
   background: radial-gradient(#F2B9A1, #EA6264);
   padding:10px;
@@ -418,5 +430,25 @@ footer p {
   top:50%;
 }
 
+/* -----404 Page----- */
+.not-found-page h1 {
+  padding: 0 38% 0 10%;
+}
+.error-main {
+  width: 80%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 10% auto 6%;
+}
 
+.error-main h2 {
+  padding: 14% 10% 0 0;
+  font-size: 50px;
+}
+
+.error-img {
+  width: 50%;
+  height: auto;
+}
 /* # sourceMappingURL=style.css.map */
