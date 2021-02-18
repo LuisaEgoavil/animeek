@@ -100,9 +100,16 @@ h1 {
 
 .wrapper-signup,
 .wrapper-login {
-  margin: 5% auto ;
+  margin: 5% auto 3%;
   display: flex;
   justify-content: center;
+}
+
+.error {
+  text-align: center;
+  font-size: 50px;
+  color: #ff0000;
+  border: 2px solid;
 }
 
 .signup-forms,
@@ -125,11 +132,16 @@ h1 {
   margin-right: 7%;
 }
 
-.signup-btn,
-.login-btn {
+.signup-btn {
   display: block;
   text-align: center;
   margin: 20% 0;
+}
+
+.login-btn {
+  display: block;
+  text-align: center;
+  margin: 10% 0;
 }
 
 .signup-btn {
@@ -160,11 +172,14 @@ h1 {
   padding-left: 2%;
 }
 
-.login-footer {
+.index-footer,
+.login-footer,
+.signup-footer {
   position: fixed;
   bottom: 0;
   left: 10%;
   width: 100%;
+  margin-bottom: 2%;
 }
 
 /* -----Profile Page----- */
@@ -236,11 +251,11 @@ h1 {
 
 .profile-footer {
   position: fixed;
-  left: 10%;
+  left:7%;
   bottom: 0;
   width: 100;
   background-color:  rgb(255, 209, 183);
-  padding-bottom: 1%;
+  padding: 0 0 1%;
 }
 
 /* -----search Page----- */
@@ -328,11 +343,11 @@ h1 {
 
 .search-footer {
   position: fixed;
-  left: 10%;
+  left: 9%;
   bottom: 0;
-  width: 100;
+  width: 100%;
   background-color:  rgb(255, 209, 183);
-  padding: 0 20% 1%;
+  padding: 0 0 1%;
 }
 
 /* -----footer----- */
@@ -345,6 +360,16 @@ footer p {
   padding-top: 2px;
   display: inline-block;
   margin: 0;
+}
+
+.index-footer,
+.login-footer,
+.signup-footer {
+  position: fixed;
+  bottom: 0;
+  left: 10%;
+  width: 100%;
+  margin-bottom: 2%;
 }
 
 /* -----About Page----- */
