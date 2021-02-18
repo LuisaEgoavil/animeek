@@ -63,12 +63,10 @@ router.post('/login', (req, res, next) => {
 
         //IF THE USER EXISTS
         if(result) {
-
           bcrypt.compare(password, result.password)
               .then((isMatching) => {
                   if(isMatching) {
-                    req.session.userData = result
-                    req.session.areyoutired = false
+                    req.session.userData = result;
                     res.redirect('/profile')
                   }
                   else{
@@ -147,3 +145,5 @@ router.get("/aboutus", (req, res, next)=>{
 
 //EXPORT
 module.exports = router;
+
+
