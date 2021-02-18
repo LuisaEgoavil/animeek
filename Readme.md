@@ -7,7 +7,7 @@ Animeek is an app 💻 where you can search 🔍 for your favorite Anime and be 
 
 ## MVP
 
-Animeek uses Jikan API that allow us to get all the information our users need 👍
+Animeek uses Jikan API that allow us to get all the information our users need 👍 
 
 ## Data Sctructure
 ***
