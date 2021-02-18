@@ -16,6 +16,7 @@ h1 {
   margin-top: 2% auto;
   padding: 0 30% 0 18%;
   font-size: 70px;
+  white-space: nowrap;
 }
 
 /* -----layout Page----- */
@@ -314,9 +315,18 @@ footer p {
   margin: 0;
 }
 
+.aboutus-footer {
+  margin-top: 2%;
+}
+
 /* -----About Page----- */
-.about-top {
-  padding: 0 30% 0 16%;
+.about-title {
+  padding: 0 40% 0 16%;
+}
+
+/* -----aboutus.hbs page----- */
+.aboutus-title {
+  padding: 0 20% 0 35%;;
 }
 
 .container-about {
