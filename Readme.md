@@ -8,14 +8,6 @@ Animeek is an app 💻 where you can search 🔍 for your favorite Anime and be 
 
 Animeek uses Jikan API that allow us to get all the information our users need 👍
 
-*
-*
-*
-*
-*
-*
-
-
 ## Data Sctructure
 ***
 ### routes
@@ -38,17 +30,17 @@ Animeek uses Jikan API that allow us to get all the information our users need �
 ***
 ### views
 ***
-#### * auth
+####  auth
 - loging.hbs
 - signup.hbs
 ***
-#### * about.hbs
-#### * error.hbs
-#### * index.hbs
-#### * layout.hbs
-#### * not-found.hbs
-#### * profile.hbs
-#### * search.hbs
+- about.hbs
+- error.hbs
+- index.hbs
+- layout.hbs
+- not-found.hbs
+- profile.hbs
+- search.hbs
 ***
 ### app.js
 - app.use()
