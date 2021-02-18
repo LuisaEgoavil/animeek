@@ -314,14 +314,6 @@ footer p {
   margin: 0;
 }
 
-footer a {
-  margin-left: 6px;
-}
-
-footer .btn {
-  padding: 0;
-}
-
 /* -----About Page----- */
 .about-top {
   padding: 0 18% 0 22%;
@@ -433,5 +425,25 @@ footer .btn {
   top:50%;
 }
 
+/* -----404 Page----- */
+.not-found-page h1 {
+  padding: 0 38% 0 10%;
+}
+.error-main {
+  width: 80%;
+  text-align: center;
+  display: flex;
+  justify-content: center;
+  margin: 10% auto 6%;
+}
 
+.error-main h2 {
+  padding: 14% 10% 0 0;
+  font-size: 50px;
+}
+
+.error-img {
+  width: 50%;
+  height: auto;
+}
 /* # sourceMappingURL=style.css.map */
