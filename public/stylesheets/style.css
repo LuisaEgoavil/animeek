@@ -1,6 +1,6 @@
 body {
   width: 100%;
-  padding: 30px 70px 70px 70px;
+  padding: 30px 70px 10px;
   /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
   font-family: 'Truculenta', sans-serif;
   background-color:  rgb(255, 209, 183);
@@ -298,6 +298,44 @@ h1 {
   padding: 2% 4%;
 }
 
+/* -----footer----- */
+footer {
+  text-align: center;
+  margin-top: 5%;
+}
 
+footer p {
+  padding-top: 2px;
+  display: inline-block;
+  margin: 0;
+}
+
+footer a {
+  margin-left: 6px;
+}
+
+footer .btn {
+  padding: 0;
+}
+
+/* -----About Page----- */
+.wrap-card {
+  display: flex;
+}
+
+.wrap-card:nth-child(odd) {
+  flex-direction: row-reverse;
+}
+.wrap-card:nth-child(odd) .img {
+  margin: 0 0 0 20px;
+}
+.card {
+  width: 288px;
+  height: auto;
+}
+
+.card-body {
+  margin: 0;
+}
 
 /* # sourceMappingURL=style.css.map */
