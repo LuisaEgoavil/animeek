@@ -1,6 +1,6 @@
 body {
   width: 100%;
-  padding: 30px 70px 10px;
+  padding: 0 70px 10px;
   /* font: 14px "Lucida Grande", Helvetica, Arial, sans-serif; */
   font-family: 'Truculenta', sans-serif;
   background-color:  rgb(255, 209, 183);
@@ -159,6 +159,10 @@ h1 {
   padding-left: 2%;
 }
 
+.login-footer {
+  margin-top: 4%;
+}
+
 /* -----Profile Page----- */
 .profile-top {
   padding: 0 17% 0 24%;
@@ -306,7 +310,7 @@ h1 {
 /* -----footer----- */
 footer {
   text-align: center;
-  margin-top: 5%;
+  margin-top: 8%;
 }
 
 footer p {
@@ -315,19 +319,24 @@ footer p {
   margin: 0;
 }
 
-.aboutus-footer {
-  margin-top: 2%;
-}
-
 /* -----About Page----- */
 .about-title {
   padding: 0 40% 0 16%;
+}
+
+.about-footer {
+  margin-top: 5%;
 }
 
 /* -----aboutus.hbs page----- */
 .aboutus-title {
   padding: 0 20% 0 35%;;
 }
+
+.aboutus-footer {
+  margin-top: 2%;
+}
+
 
 .container-about {
   width: 60%;
