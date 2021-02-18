@@ -139,6 +139,9 @@ router.get("/about", (req, res, next)=>{
   res.render("about")
 })
 
+router.get("/aboutus", (req, res, next)=>{
+  res.render("aboutus")
+})
 
 
 
